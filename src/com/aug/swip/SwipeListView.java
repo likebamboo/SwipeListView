@@ -208,6 +208,11 @@ public class SwipeListView extends ListView {
                         showRight(mCurrentItemView);
                     } else {
                         System.out.println("5---> hiddenRight");
+                        /**
+                         * 情况五：
+                         * <p>
+                         * 向右滑动一个item,且滑动的距离超过了右边View的宽度的一半，隐藏之。
+                         */
                         hiddenRight(mCurrentItemView);
                     }
 

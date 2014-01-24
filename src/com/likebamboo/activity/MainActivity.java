@@ -3,6 +3,7 @@ package com.likebamboo.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
@@ -39,6 +40,14 @@ public class MainActivity extends Activity {
                                 Toast.LENGTH_SHORT).show();
                     }
                 });
+        mListView.addHeaderView(LayoutInflater.from(this).inflate(R.layout.list_footer, null));
+        mListView.addHeaderView(LayoutInflater.from(this).inflate(R.layout.list_footer, null));
+        mListView.addHeaderView(LayoutInflater.from(this).inflate(R.layout.list_footer, null));
+        mListView.addFooterView(LayoutInflater.from(this).inflate(R.layout.list_footer, null));
+        mListView.addFooterView(LayoutInflater.from(this).inflate(R.layout.list_footer, null));
+        mListView.addFooterView(LayoutInflater.from(this).inflate(R.layout.list_footer, null));
+        mListView.addFooterView(LayoutInflater.from(this).inflate(R.layout.list_footer, null));
+        mListView.addFooterView(LayoutInflater.from(this).inflate(R.layout.list_footer, null));
         mListView.setAdapter(adapter);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

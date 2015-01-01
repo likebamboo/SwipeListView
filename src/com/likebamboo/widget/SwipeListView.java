@@ -253,8 +253,10 @@ public class SwipeListView extends ListView {
                          */
                         hiddenRight(mCurrentItemView);
                     }
-
-                    return true;
+                    MotionEvent obtain = MotionEvent.obtain(ev);
+				    obtain.setAction(MotionEvent.ACTION_CANCEL);
+				    super.onTouchEvent(obtain);
+				    return true;
                 }
 
                 break;
